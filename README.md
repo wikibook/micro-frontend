@@ -4,7 +4,7 @@
 
 ## 책 소개
 
-<a href="https://wikibook.co.kr/images/cover/l/9791158394080.jpg"><img src="https://wikibook.co.kr/images/cover/l/9791158394080.jpg" alt="The Art of Micro Frontends" height="256px" align="right"></a>
+<a href="https://wikibook.co.kr/micro-frontend/"><img src="bookcover.jpg" alt="책 표지" height="256px" align="right"></a>
 
 **마이크로 프런트엔드 아키텍처로 복잡성을 해결하고 단일 장애 지점을 제거하자!**
 
