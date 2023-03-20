@@ -1,133 +1,103 @@
+# 모던 웹을 위한 마이크로 프런트엔드
 
+[《모던 웹을 위한 마이크로 프런트엔드》](https://wikibook.co.kr/micro-frontend/) 저장소입니다.
 
+## 책 소개
 
-# The Art of Micro Frontends
+<a href="https://wikibook.co.kr/micro-frontend/"><img src="bookcover.jpg" alt="책 표지" height="256px" align="right"></a>
 
-<a href="https://www.packtpub.com/product/the-art-of-microfrontends/9781800563568"><img src="https://static.packt-cdn.com/products/9781800563568/cover/smaller" alt="The Art of Micro Frontends" height="256px" align="right"></a>
+**마이크로 프런트엔드 아키텍처로 복잡성을 해결하고 단일 장애 지점을 제거하자!**
 
-This is the code repository for [The Art of Micro Frontends](https://www.packtpub.com/product/the-art-of-microfrontends/9781800563568), published by Packt.
+마이크로 프런트엔드는 소프트웨어 개발의 마이크로서비스 개념에서 차용한 프런트엔드 개발을 위한 웹 아키텍처로, 프런트엔드의 복잡성과 단일 장애 지점을 피하기 위해 프런트엔드의 각 모듈을 독립적으로 개발하고 출시한다.
 
-**Build websites using compositional UIs that grow naturally as your application scales**
+이 책은 따라 하기 쉬운 가이드 형식으로 실습 튜토리얼, 프로젝트 및 자가 평가 질문으로 구성돼 있으며, 마이크로 프런트엔드 솔루션을 구현하는 데 사용할 수 있는 패턴을 안내한다. 마이크로 프런트엔드 일반, 다양한 아키텍처 스타일과 사용 영역, 마이크로 프런트엔드로의 변경에 대비하여 팀을 준비하는 방법, 확장성을 위해 UI 디자인을 조정하는 방법 등을 배울 수 있으며, 마이크로 프런트엔드 아키텍처의 가장 단순한 변형부터 시작하여 정적 접근 방식에서 더 빠른 릴리스 주기로 확장성을 극대화할 수 있는 완전 동적 솔루션까지 다룬다. 마지막 장에서는 마이크로 프런트엔드와 관련된 다양한 사례 연구를 통해 얻은 지식을 강화할 수 있다.
 
-## What is this book about?
-Micro frontend is a web architecture for frontend development borrowed from the idea of microservices in software development, where each module of the frontend is developed and shipped in isolation to avoid complexity and a single point of failure for your frontend.
-Complete with hands-on tutorials, projects, and self-assessment questions, this easy-to-follow guide will take you through the patterns available for implementing a micro frontend solution. You’ll learn about micro frontends in general, the different architecture styles and their areas of use, how to prepare teams for the change to micro frontends, as well as how to adjust the UI design for scalability. Starting with the simplest variants of micro frontend architectures, the book progresses from static approaches to fully dynamic solutions that allow maximum scalability with faster release cycles. In the concluding chapters, you'll reinforce the knowledge you’ve gained by working on different case studies relating to micro frontends.
-By the end of this book, you'll be able to decide if and how micro frontends should be implemented to achieve scalability for your user interface (UI).
+**★ 이 책에서 다루는 내용 ★**
 
-This book covers the following exciting features:
-* Understand how to choose the right micro frontend architecture
-* Design screens for compositional UIs
-* Create a great developer experience for micro frontend solutions
-* Achieve enhanced user experiences with micro frontends
-* Introduce governance and boundary checks for managing distributed frontends
-* Build scalable modular web applications from scratch or by migrating an existing monolith
+- 올바른 마이크로 프런트엔드 아키텍처를 선택하는 방법
+- 컴포지션 UI를 위한 화면 디자인
+- 마이크로 프런트엔드 솔루션을 위한 뛰어난 개발자 경험 만들기
+- 마이크로 프런트엔드로 향상된 사용자 경험 달성
+- 분산된 프런트엔드 관리를 위한 거버넌스 및 경계 검사 도입
+- 처음부터 또는 기존 모놀리스를 마이그레이션하여 확장 가능한 모듈식 웹 애플리케이션 구축
 
-If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1800563566) today!
+### 대상 독자
 
-<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" alt="https://www.packtpub.com/" border="5" /></a>
+이 책은 소프트웨어/솔루션 아키텍트 또는 (주로 리드) 개발자, 웹 개발자 및 프론트엔드 엔지니어를 위한 책입니다. HTML과 CSS에 대한 초급 수준의 지식과 함께 자바스크립트 프로그래밍 및 Node.js와 NPM을 포함한 해당 에코시스템에 대한 탄탄한 이해가 전제되어 있습니다.
 
-## Instructions and Navigations
-All of the code is organized into folders. For example, Chapter02.
+## 실습 안내
 
-The code will look like the following:
-```
-if (test expression)
-{
-  Statement upon condition is true
-}
-```
-## Cloning the Repository
+### 저장소 복제
 
-This repository contains all repositories with sample codes. These repositories have been included as Git modules. In order to check them out at clone you should add the `--recurse-submodules` flag:
+이 리포지터리에는 샘플 코드가 있는 모든 리포지터리들이 포함되어 있습니다. 이러한 리포지터리들은 Git 모듈로 포함되었습니다. 복제할 때 체크아웃하려면 다음과 같이 `--recurse-submodules` 플래그를 추가해야 합니다.
 
 ```sh
-git clone --recurse-submodules https://github.com/PacktPublishing/The-Art-of-Microfrontends.git
+git clone --recurse-submodules https://github.com/wikibook/micro-frontend.git
 ```
 
-## Updating the Repository
+### 저장소 갱신
 
-Once the submodules are checked out the code is stuck at this point in time. Therefore, just like the repository itself, the submodules need to be pulled.
+서브모듈이 체크아웃되면 이 시점에서 코드가 멈추게 됩니다. 따라서 리포지터리 자체와 마찬가지로 서브모듈도 끌어와야(pull) 합니다.
 
-To do everything in a single command you can just use `--recurse-submodules` with `git pull`:
+단일 명령으로 모든 작업을 수행하려면 `--recurse-submodules`와 `git pull`을 함께 사용하면 됩니다.
 
 ```sh
 git pull --recurse-submodules
 ```
 
-## Using the Code
+### 실습
 
-Each directory containing a sample repository has a README file with instructions on what is necessary and how to run the code.
+샘플 저장소가 포함된 각 디렉터리에는 필요한 사항과 코드 실행 방법에 대한 지침이 포함된 README 파일이 있습니다(README를 번역해서 책의 부록에 실었습니다).
 
-For the samples of chapter 7 (Server-side composition) and chapter 11 (Siteless UIs) the code has been split across multiple repositories. This was done to illustrate the distributed nature of microfrontends in general, and in particular of the given approaches.
+7장(서버 측 구성)과 11장(사이트리스 UI)의 샘플의 경우 코드가 여러 리포지토리에 분할되어 있습니다. 이는 일반적으로 마이크로프론트엔드의 분산 특성, 특히 주어진 접근 방식의 분산 특성을 설명하기 위해 수행되었습니다.
 
-The recommendation here would be to start with the gateway (chapter 7) and app shell (chapter 11) before running the MF repositories. In case of chapter 11 you'll also need to run the feed server.
+여기서는 MF 리포지토리를 실행하기 전에 게이트웨이(7장)와 앱 셸(11장)부터 시작하는 것을 권장합니다. 11장의 경우 피드 서버도 실행해야 합니다.
 
-Pretty much all samples have been created exclusively using web technologies such as HTML and JavaScript. For the edge-side composition example (chapter 8) a *Dockerfile* running an nginx server was added.
+거의 모든 샘플은 HTML 및 JavaScript와 같은 웹 기술만을 사용하여 작성되었습니다. 엣지 사이드 컴포지션 예제(8장)의 경우 nginx 서버를 실행하는 도커 파일이 추가되었습니다.
 
-If you'll encounter any problem or have some improvement in mind then don't hesitate to open an [issue on GitHub](https://github.com/PacktPublishing/The-Art-of-Microfrontends/issues).
+### 예제 목록
 
-## Available Samples
+* 5장 - 마이크로프론트엔드 유형
+  * [직접 빌드 통합](https://github.com/ArtOfMicrofrontends/05-pipeline)
+  * [조회 테이블을 통한 느슨한 커플링](https://github.com/ArtOfMicrofrontends/05-server-discover)
+* 6장 - 웹 접근 방식
+  * [패턴 예시](https://github.com/ArtOfMicrofrontends/06-web-approach)
+* 7장 - 서버 측 구성
+  * [MF 오케스트레이션을 위한 게이트웨이](https://github.com/ArtOfMicrofrontends/07-gateway)
+  * [상품 페이지를 제공하는 빨간색 MF](https://github.com/ArtOfMicrofrontends/07-red)
+  * [구매 기능을 제공하는 파란색 MF](https://github.com/ArtOfMicrofrontends/07-blue)
+  * [추천 기능을 제공하는 녹색 MF](https://github.com/ArtOfMicrofrontends/07-green)
+* 8장 - 엣지 사이드 구성
+  * [패턴 예시](https://github.com/ArtOfMicrofrontends/08-edge-side-composition)
+* 9장 - 클라이언트 측 컴포지션
+  * [패턴 예시](https://github.com/ArtOfMicrofrontends/09-client-side-composition)
+* 10장 - SPA 컴포지션
+  * [패턴 예시](https://github.com/ArtOfMicrofrontends/10-spa-composition)
+* 11장 - 사이트리스 UI
+  * [MF를 오케스트레이션하는 앱 셸](https://github.com/ArtOfMicrofrontends/11-app-shell)
+  * [MF를 동적으로 프로비저닝하는 피드 서버](https://github.com/ArtOfMicrofrontends/11-service-feed)
+  * [대차 대조표를 가져오는 잔액 MF](https://github.com/ArtOfMicrofrontends/11-frontend-balance)
+  * [설정 대화 상자를 제공하는 설정 MF](https://github.com/ArtOfMicrofrontends/11-frontend-settings)
+  * [대차 대조표에 대한 확장 기능을 제공하는 세금 MF](https://github.com/ArtOfMicrofrontends/11-frontend-tax)
 
-* Chapter 5 - Types of Microfrontends
-  * [Direct build integration](https://github.com/ArtOfMicrofrontends/05-pipeline)
-  * [Looser coupling via lookup table](https://github.com/ArtOfMicrofrontends/05-server-discover)
-* Chapter 6 - The Web Approach
-  * [Pattern example](https://github.com/ArtOfMicrofrontends/06-web-approach)
-* Chapter 7 - Server-Side Composition
-  * [Gateway to orchstrate MFs](https://github.com/ArtOfMicrofrontends/07-gateway)
-  * [Red MF bringing product page](https://github.com/ArtOfMicrofrontends/07-red)
-  * [Blue MF bringing purchase ability](https://github.com/ArtOfMicrofrontends/07-blue)
-  * [Green MF bringing recommendations](https://github.com/ArtOfMicrofrontends/07-green)
-* Chapter 8 - Edge-Side Composition
-  * [Pattern example](https://github.com/ArtOfMicrofrontends/08-edge-side-composition)
-* Chapter 9 - Client-Side Compositionv
-  * [Pattern example](https://github.com/ArtOfMicrofrontends/09-client-side-composition)
-* Chapter 10 - SPA Composition
-  * [Pattern example](https://github.com/ArtOfMicrofrontends/10-spa-composition)
-* Chapter 11 - Siteless UIs
-  * [App Shell to orchestrate MFs](https://github.com/ArtOfMicrofrontends/11-app-shell)
-  * [Feed server to dynamically provision MFs](https://github.com/ArtOfMicrofrontends/11-service-feed)
-  * [Balance MF bringing the balance sheet](https://github.com/ArtOfMicrofrontends/11-frontend-balance)
-  * [Settings MF bringing the settings dialog](https://github.com/ArtOfMicrofrontends/11-frontend-settings)
-  * [Tax MF offering an extension for the balance sheet](https://github.com/ArtOfMicrofrontends/11-frontend-tax)
+### 소프트웨어 및 하드웨어
 
-**Following is what you need for this book:**
-This book is for software/solution architects or (mostly lead) developers as well as web developers and frontend engineers. Beginner-level knowledge of HTML and CSS along with a solid understanding of JavaScript programming and its ecosystem, including Node.js and NPM, is assumed.
+다음 소프트웨어 및 하드웨어 목록을 사용하면 이 책에 있는 모든 코드 파일을 실행할 수 있습니다(1장~16장).
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-16).
+| 필요한 소프트웨어       | 필요한 OS                    |
+| -----------------------| ----------------------------|
+| Node.js 12             | Windows, Mac OS X 또는 Linux |
+| NPM 6                  | Windows, Mac OS X 또는 Linux |
+| ECMAScript 2015(6) 이상 | Windows, Mac OS X 또는 Linux |
 
-### Software and Hardware List
+이 책에 사용된 스크린샷/도표의 컬러 이미지가 포함된 PDF 파일도 제공합니다. [다운로드하려면 여기를 클릭하세요](https://static.packt-cdn.com/downloads/9781800563568_ColorImages.pdf).
 
-| Chapter  | Software required                   | OS required                        |
-| -------- | ------------------------------------| -----------------------------------|
-| 1 to 16      | Node.js 12                     | Windows, Mac OS X, and Linux (Any) |
-| 1 to 16        | NPM 6            | Windows, Mac OS X, and Linux (Any) |
-| 1 to 16        | ECMAScript 2015 (6) or above          | Windows, Mac OS X, and Linux (Any) |
+## 동영상
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781800563568_ColorImages.pdf).
-
-## Code in Action
-
-Click on the following link to see the Code in Action:
+코드를 설명한 동영상(영어)이 있습니다.
 
 [YouTube](https://www.youtube.com/playlist?list=PLeLcvrwLe185OWoZT0hfN5zesgVangK5M)
 
-## Errata
+## 오탈자
 
-* Page 160 (Pragraph 3,Line 18): **URL has to monitored** _should be_ **URL has to be monitored**
-
-
-### Related products <Other books you may enjoy>
-* Svelte 3 Up and Running [[Packt]](https://www.packtpub.com/product/svelte-3-up-and-running/9781839213625) [[Amazon]](https://www.amazon.com/dp/1839213620)
-
-* Vue.js 3 By Example [[Packt]](https://www.packtpub.com/product/vue-js-3-by-example/9781838826345) [[Amazon]](https://www.amazon.com/dp/1838826343)
-
-## Get to Know the Author
-**Florian Rappl**
-is a solution architect working on distributed web applications for digital transformation and IoT projects. His main interest lies in the implementation of micro frontends and their impact on teams and business models.
-As the lead architect he helped to create outstanding web applications for many industry leading companies. He regularly gives lectures on software design patterns and web development. Florian won multiple prizes for his work over the years and is recognized as a Microsoft MVP for development technologies.
-He started his career in software engineering before studying physics and helping to build an energy-efficient supercomputer. Florian currently lives in Munich, Germany, with his wife and two daughters.
-### Download a free PDF
-
- <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
-<p align="center"> <a href="https://packt.link/free-ebook/9781800563568">https://packt.link/free-ebook/9781800563568 </a> </p>
+* [https://wikibook.co.kr/micro-frontend/](https://wikibook.co.kr/micro-frontend/)를 참조
